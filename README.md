@@ -1,5 +1,21 @@
-## Mini v2 node STM32CubeMX generated project
+# RaccoonLab Mini v2 node STM32CubeMX generated project
 
-The project has the following pinout configuration that is similar to what we have for the original CAN-PWM firmware.
+This is a template repository for RaccoonLab Mini v2 node.
+
+The core of this repository is [the .ioc file](can_pwm_v2.ioc) that defines the stm32 peripherals with respect to what a real device has.
+
+The peripheral configuration is shown below:
 
 <img src="Assets/stm32cubemx.png" alt="drawing">
+
+Additionally, the reposity has a source code generated with `STM32CubeMX v6.6.0` using STM32Cube FW_G0 V1.6.1 for `STM32CubeIDE` usage.
+
+Feel free to write your own custom firmware to test some features or suggest something.
+
+The entry point is [Core/Src/main.c](Core/Src/main.c). This file initializes all the peripherals and then goes to application_entry_point(). This is where a custom user logic is expected to be implemented.
+
+Reference:
+
+1. Hardware: https://docs.raccoonlab.co/guide/can_pwm/can_pwm_mini_v2.html
+2. Docs: https://docs.raccoonlab.co/guide/can_pwm/
+3. Usage example: https://github.com/RaccoonlabDev/mini_v2_node
