@@ -14,7 +14,16 @@ Feel free to write your own custom firmware to test some features or suggest som
 
 The entry point is [Core/Src/main.c](Core/Src/main.c). This file initializes all the peripherals and then goes to application_entry_point(). This is where a custom user logic is expected to be implemented.
 
-Reference:
+## Features
+
+- ADC VIN
+- ADC 5V
+- ADC Hardware Version
+- RGB LED (3 pins)
+- UART RX x2
+- Independent Watchdog (1.63 sec)
+
+## Reference:
 
 1. Hardware: https://docs.raccoonlab.co/guide/can_pwm/can_pwm_mini_v2.html
 2. Docs: https://docs.raccoonlab.co/guide/can_pwm/
