@@ -1,0 +1,42 @@
+name: cubeide_build
+
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        project_name: ['project_v2']
+    container:
+      image: wsbu/stm32cubeide
+    steps:
+      - name: Force Install GIT latest. Necessary for ubuntu-18.04 and older.
+        run: |
+          apt-get update \
+          && apt-get install -y software-properties-common \
+          && apt-get update \
+          && add-apt-repository -y ppa:git-core/ppa \
+          && apt-get update \
+          && apt-get install -y git
+
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - run: |
+          wget https://raw.githubusercontent.com/PonomarevDA/tools/15f57ee7c7f40db6d8146382e8fa69d2b83233f7/stm32/build_cubeide.sh
+          chmod +x build_cubeide.sh
+          ./build_cubeide.sh -v -c /opt/stm32cubeide/stm32cubeide -d . -p ${{ matrix.project_name }}
+
+      - name: Archive .elf file
+        uses: actions/upload-artifact@v3
+        with:
+          name: firmware.elf
+          path: Release/project_v2.elf
+
+      - name: Archive .bin file
+        uses: actions/upload-artifact@v3
+        with:
+          name: firmware.bin
+          path: Release/project_v2.bin

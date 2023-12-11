@@ -49,8 +49,6 @@ extern "C" {
 
 /* USER CODE END EM */
 
-void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
-
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -59,12 +57,26 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define INTERNAL_LED_BLUE_Pin GPIO_PIN_4
-#define INTERNAL_LED_BLUE_GPIO_Port GPIOA
-#define INTERNAL_LED_GREEN_Pin GPIO_PIN_8
-#define INTERNAL_LED_GREEN_GPIO_Port GPIOA
-#define INTERNAL_LED_RED_Pin GPIO_PIN_15
-#define INTERNAL_LED_RED_GPIO_Port GPIOA
+#define ADC_VIN_Pin GPIO_PIN_0
+#define ADC_VIN_GPIO_Port GPIOA
+#define ADC_5V_Pin GPIO_PIN_1
+#define ADC_5V_GPIO_Port GPIOA
+#define INT_RGB_LED_BLUE_Pin GPIO_PIN_4
+#define INT_RGB_LED_BLUE_GPIO_Port GPIOA
+#define ADC_VERSION_Pin GPIO_PIN_1
+#define ADC_VERSION_GPIO_Port GPIOB
+#define INT_RGB_LED_GREEN_Pin GPIO_PIN_8
+#define INT_RGB_LED_GREEN_GPIO_Port GPIOA
+#define INT_RGB_LED_RED_Pin GPIO_PIN_15
+#define INT_RGB_LED_RED_GPIO_Port GPIOA
+#define PWM3_TIM3_CH1_Pin GPIO_PIN_4
+#define PWM3_TIM3_CH1_GPIO_Port GPIOB
+#define PWM4_TIM3_CH2_Pin GPIO_PIN_5
+#define PWM4_TIM3_CH2_GPIO_Port GPIOB
+#define PWM2_TIM4_CH1_Pin GPIO_PIN_6
+#define PWM2_TIM4_CH1_GPIO_Port GPIOB
+#define PWM1_TIM4_CH2_Pin GPIO_PIN_7
+#define PWM1_TIM4_CH2_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

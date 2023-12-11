@@ -2,7 +2,7 @@
 
 This is a template repository for RaccoonLab Mini v2 node.
 
-The core of this repository is [the .ioc file](can_pwm_v2.ioc) that defines the stm32 peripherals with respect to what a real device has.
+The core of this repository is [the .ioc file](project_v2.ioc) that defines the stm32 peripherals with respect to what a real device has.
 
 The peripheral configuration is shown below:
 
