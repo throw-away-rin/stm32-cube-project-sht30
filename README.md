@@ -6,7 +6,10 @@ The core of this repository is [the .ioc file](project_v2.ioc) that defines the 
 
 The peripheral configuration is shown below:
 
-<img src="Assets/stm32cubemx.png" alt="drawing">
+| |
+|-|
+| <img src="Assets/stm32cubemx.png" alt="drawing" width=400> |
+| <img src="Assets/adc1_mode_and_configuration.png" alt="drawing" width=400> |
 
 Additionally, the reposity has a source code generated with `STM32CubeMX v6.6.0` using STM32Cube FW_G0 V1.6.1 for `STM32CubeIDE` usage.
 
