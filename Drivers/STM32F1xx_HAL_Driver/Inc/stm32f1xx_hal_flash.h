@@ -6,14 +6,12 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2016 STMicroelectronics.
-  * All rights reserved.</center></h2>
+  * Copyright (c) 2016 STMicroelectronics.
+  * All rights reserved.
   *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
+  * This software is licensed under terms that can be found in the LICENSE file in
+  * the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
   ******************************************************************************
   */
 
@@ -26,7 +24,7 @@
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f1xx_hal_def.h"
+#include <stm32f1xx_hal_def.h>
    
 /** @addtogroup STM32F1xx_HAL_Driver
   * @{
@@ -245,7 +243,7 @@ typedef struct
   */ 
 
 /* Include FLASH HAL Extended module */
-#include "stm32f1xx_hal_flash_ex.h"  
+#include <stm32f1xx_hal_flash_ex.h>  
 
 /* Exported functions --------------------------------------------------------*/
 /** @addtogroup FLASH_Exported_Functions
@@ -324,5 +322,4 @@ HAL_StatusTypeDef       FLASH_WaitForLastOperationBank2(uint32_t Timeout);
 
 #endif /* __STM32F1xx_HAL_FLASH_H */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 

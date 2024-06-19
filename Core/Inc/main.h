@@ -71,14 +71,6 @@ void Error_Handler(void);
 #define INT_RGB_LED_GREEN_GPIO_Port GPIOA
 #define INT_RGB_LED_RED_Pin GPIO_PIN_15
 #define INT_RGB_LED_RED_GPIO_Port GPIOA
-#define PWM3_TIM3_CH1_Pin GPIO_PIN_4
-#define PWM3_TIM3_CH1_GPIO_Port GPIOB
-#define PWM4_TIM3_CH2_Pin GPIO_PIN_5
-#define PWM4_TIM3_CH2_GPIO_Port GPIOB
-#define PWM2_TIM4_CH1_Pin GPIO_PIN_6
-#define PWM2_TIM4_CH1_GPIO_Port GPIOB
-#define PWM1_TIM4_CH2_Pin GPIO_PIN_7
-#define PWM1_TIM4_CH2_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
